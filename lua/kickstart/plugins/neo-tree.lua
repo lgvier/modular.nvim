@@ -33,4 +33,15 @@ return {
       },
     },
   },
+  config = function()
+    require('neo-tree').setup {
+      close_if_last_window = true, -- Set to true to close Neo-tree if it's the last window
+      -- Other Neo-tree configuration options...
+    }
+    vim.api.nvim_create_autocmd('VimEnter', {
+      callback = vim.schedule_wrap(function()
+        vim.cmd 'Neotree show'
+      end),
+    })
+  end,
 }
