@@ -44,6 +44,15 @@ return {
       ---@type Neominimap.UserConfig
       vim.g.neominimap = {
         auto_enable = true,
+        float = {
+          minimap_width = 15, ---@type integer
+        },
+        click = {
+          -- Enable mouse click on the minimap
+          enabled = true, ---@type boolean
+          -- Automatically switch focus to the minimap when clicked
+          auto_switch_focus = false, ---@type boolean
+        },
       }
     end,
   },
