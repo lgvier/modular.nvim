@@ -17,6 +17,9 @@ return {
     require('neo-tree').setup {
       close_if_last_window = true, -- Set to true to close Neo-tree if it's the last window
       filesystem = {
+        follow_current_file = {
+          enabled = true,
+        },
         window = {
           mappings = {
             ['\\'] = 'close_window',
