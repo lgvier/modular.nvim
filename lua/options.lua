@@ -26,6 +26,10 @@ end)
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Wrap long lines visually (display only, doesn't modify file)
+vim.o.wrap = true
+vim.o.linebreak = true -- Break at word boundaries
+
 -- Save undo history
 vim.o.undofile = true
 

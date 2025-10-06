@@ -37,15 +37,19 @@ return {
     },
     init = function()
       -- The following options are recommended when layout == "float"
-      vim.opt.wrap = false
-      vim.opt.sidescrolloff = 36 -- Set a large value
+      -- vim.opt.wrap = false
+      -- vim.opt.sidescrolloff = 36 -- Set a large value
 
       --- Put your configuration here
       ---@type Neominimap.UserConfig
       vim.g.neominimap = {
         auto_enable = true,
-        float = {
+        layout = 'split', -- Use split instead of float
+        split = {
           minimap_width = 15, ---@type integer
+          fix_width = false, ---@type boolean
+          close_if_last_window = true, ---@type boolean
+          persist = true, ---@type boolean
         },
         click = {
           -- Enable mouse click on the minimap
